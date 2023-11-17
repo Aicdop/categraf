@@ -145,13 +145,13 @@ archives:
 
 release:
   github:
-    owner: flashcatcloud
+    owner: aicdop
     name: categraf
   name_template: "v{{ .Version }}"
 
 dockers:
   - image_templates:
-      - flashcatcloud/categraf:{{ .Tag }}-amd64
+      - aicdop/categraf:{{ .Tag }}-amd64
     goos: linux
     goarch: amd64
     ids:
@@ -180,7 +180,7 @@ dockers:
       - "--platform=linux/amd64"
 
   - image_templates:
-      - flashcatcloud/categraf:slim-{{ .Tag }}-amd64
+      - aicdop/categraf:slim-{{ .Tag }}-amd64
     goos: linux
     goarch: amd64
     ids:
@@ -209,7 +209,7 @@ dockers:
       - "--platform=linux/amd64"
 
   - image_templates:
-      - flashcatcloud/categraf:{{ .Tag }}-arm64v8
+      - aicdop/categraf:{{ .Tag }}-arm64v8
     goos: linux
     goarch: arm64
     ids:
@@ -238,7 +238,7 @@ dockers:
       - "--platform=linux/arm64/v8"
 
   - image_templates:
-      - flashcatcloud/categraf:slim-{{ .Tag }}-arm64v8
+      - aicdop/categraf:slim-{{ .Tag }}-arm64v8
     goos: linux
     goarch: arm64
     ids:
@@ -267,18 +267,18 @@ dockers:
       - "--platform=linux/arm64/v8"
 
 docker_manifests:
-  - name_template: flashcatcloud/categraf:{{ .Tag }}
+  - name_template: aicdop/categraf:{{ .Tag }}
     image_templates:
-      - flashcatcloud/categraf:{{ .Tag }}-amd64
-      - flashcatcloud/categraf:{{ .Tag }}-arm64v8
+      - aicdop/categraf:{{ .Tag }}-amd64
+      - aicdop/categraf:{{ .Tag }}-arm64v8
 
-  - name_template: flashcatcloud/categraf:slim-{{ .Tag }}
+  - name_template: aicdop/categraf:slim-{{ .Tag }}
     image_templates:
-      - flashcatcloud/categraf:slim-{{ .Tag }}-amd64
-      - flashcatcloud/categraf:slim-{{ .Tag }}-arm64v8
+      - aicdop/categraf:slim-{{ .Tag }}-amd64
+      - aicdop/categraf:slim-{{ .Tag }}-arm64v8
 
-  - name_template: flashcatcloud/categraf:latest
+  - name_template: aicdop/categraf:latest
     image_templates:
-      - flashcatcloud/categraf:{{ .Tag }}-amd64
-      - flashcatcloud/categraf:{{ .Tag }}-arm64v8
+      - aicdop/categraf:{{ .Tag }}-amd64
+      - aicdop/categraf:{{ .Tag }}-arm64v8
 
